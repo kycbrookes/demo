@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Brookes</title>
+	<style>
+	            * { margin: 0; padding: 0; }
+	            html {
+	            height: 100%;
+	            }
+	            body {
+	            color: black;
+	            font-size: 12px;
+	            font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	            background-image: url(img/read.jpg);
+	            background-size: cover;
+	            background-position: 100%;
+	            height: 100%;
+	            text-align: center;
+	            }
+	            body:before {
+	            content: '';
+	            display: inline-block;
+	            vertical-align: middle;
+	            height: 100%;
+	            }
+	            p {
+	            text-align: right;
+	            margin-top: 2px;
+	            padding-left: 0em;
+	            padding-right: 40em;
+	            padding-top: 2em;
+	            padding-bottom: 2em;
+	            }
+	            a {
+	            color: #000000;
+	            }
+	            code { font-size: 0.8em; display: inline; }
+	            .disable {
+	            position: fixed;
+	            bottom: 0;
+	            right: 0;
+	            }
+	            .code-string { color:#ec7600 }
+	            .code-cbracket { font-weight:bold }
+	            .code-number { color:#ffcd22 }
+	</style>
+	<link href="style/global.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+	<div class="error"></div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js">
+	</script> 
+	<script src="dist/jquery.ripples.js">
+	</script> 
+	<script>
+	   $(document).ready(function() {
+	   try {
+	            $('body').ripples({
+	            resolution: 1080,
+	            dropRadius: 50, //px
+	            perturbance: 0.3,
+	            });
+	            $('main').ripples({
+	            resolution: 256,
+	            dropRadius: 30, //px
+	            perturbance: 0.04,
+	            interactive: true
+	            });
+	            }
+	            catch (e) {
+	            $('.error').show().text(e);
+	            }
+	            $('.js-ripples-disable').on('click', function() {
+	            $('body, main').ripples('destroy');
+	            $(this).hide();
+	            });
+	            });
+	</script> <a class="fa fa-soundcloud" href="https://soundcloud.com/kycbrookes"></a> <a class="fa fa-facebook" href="https://www.facebook.com/kycbrookes"></a> <a class="fa fa-twitter" href="https://twitter.com/kycbrookes"></a> <a class="fa fa-instagram" href="https://www.instagram.com/kycbrookes"></a> <a class="fa fa-tumblr" href="https://kycbrookes.tumblr.com"></a> <a class="fa fa-linkedin" href="https://www.linkedin.com/in/kycbrookes"></a>
+	<p>Kyle Brookes</p>
+	<p>Cambridge, MA</p>
+	<p>Sound/graphic design/digital installation/interactive media</p>
+	<p>Emerson College - BA Visual Media Arts Production</p>
+	<p>© 2018 <a href="mailto:kycbrookes@gmail.com">Kyle Brookes</a></p><iframe frameborder="no" height="auto" scrolling="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/413218707&color=%23a9a9a9&inverse=false&auto_play=true&show_user=true" width="100%"></iframe>
+</body>
+</html>
